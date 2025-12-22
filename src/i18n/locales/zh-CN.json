@@ -1,0 +1,55 @@
+{
+  "common": {
+    "welcome": "欢迎使用 React + Vite + TypeScript",
+    "home": "首页",
+    "about": "关于",
+    "counter": "计数器",
+    "components": "组件对比",
+    "locale": "国际化示例",
+    "confirm": "确定",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索"
+  },
+  "home": {
+    "title": "欢迎使用 React + Vite + TypeScript",
+    "description": "这是一个现代化的 React 前端项目模板，集成了以下技术栈：",
+    "techStack": {
+      "react": "React 18",
+      "vite": "Vite - 快速的构建工具",
+      "typescript": "TypeScript - 类型安全",
+      "redux": "Redux Toolkit - 状态管理",
+      "router": "React Router - 路由管理",
+      "tailwind": "Tailwind CSS - 原子化 CSS",
+      "antd": "Ant Design - UI 组件库"
+    }
+  },
+  "about": {
+    "title": "关于项目",
+    "description": "这是一个使用现代前端技术栈构建的 React 应用示例。",
+    "detail": "项目结构清晰，代码规范，适合作为新项目的起始模板。"
+  },
+  "counter": {
+    "title": "Redux 计数器示例",
+    "increment": "增加",
+    "decrement": "减少",
+    "incrementByAmount": "增加指定数量"
+  },
+  "locale": {
+    "title": "Ant Design 国际化示例",
+    "description": "以下组件都使用了 ConfigProvider 配置的中文语言包，所有文本都是中文显示。",
+    "datePicker": "日期选择器",
+    "table": "表格",
+    "pagination": "分页",
+    "modal": "对话框",
+    "openModal": "打开对话框",
+    "modalContent": "这是一个使用中文语言包的对话框",
+    "note": "说明",
+    "note1": "如果没有配置 locale={{locale}}，这些组件会显示英文",
+    "note2": "ConfigProvider 包裹的整个组件树都会使用相同的语言配置",
+    "note3": "可以在运行时动态切换语言"
+  }
+}
+

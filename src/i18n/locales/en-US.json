@@ -1,0 +1,55 @@
+{
+  "common": {
+    "welcome": "Welcome to React + Vite + TypeScript",
+    "home": "Home",
+    "about": "About",
+    "counter": "Counter",
+    "components": "Component Comparison",
+    "locale": "Internationalization Demo",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search"
+  },
+  "home": {
+    "title": "Welcome to React + Vite + TypeScript",
+    "description": "This is a modern React frontend project template with the following tech stack:",
+    "techStack": {
+      "react": "React 18",
+      "vite": "Vite - Fast build tool",
+      "typescript": "TypeScript - Type safety",
+      "redux": "Redux Toolkit - State management",
+      "router": "React Router - Routing",
+      "tailwind": "Tailwind CSS - Atomic CSS",
+      "antd": "Ant Design - UI component library"
+    }
+  },
+  "about": {
+    "title": "About Project",
+    "description": "This is a React application example built with modern frontend tech stack.",
+    "detail": "The project structure is clear, code is standardized, suitable as a starting template for new projects."
+  },
+  "counter": {
+    "title": "Redux Counter Example",
+    "increment": "Increment",
+    "decrement": "Decrement",
+    "incrementByAmount": "Increment by Amount"
+  },
+  "locale": {
+    "title": "Ant Design Internationalization Example",
+    "description": "The following components all use the Chinese language package configured by ConfigProvider, all text is displayed in Chinese.",
+    "datePicker": "Date Picker",
+    "table": "Table",
+    "pagination": "Pagination",
+    "modal": "Modal",
+    "openModal": "Open Modal",
+    "modalContent": "This is a modal using Chinese language package",
+    "note": "Note",
+    "note1": "If locale={{locale}} is not configured, these components will display in English",
+    "note2": "The entire component tree wrapped by ConfigProvider will use the same language configuration",
+    "note3": "Can dynamically switch languages at runtime"
+  }
+}
+
