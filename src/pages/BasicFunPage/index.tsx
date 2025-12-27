@@ -5,7 +5,9 @@ import TableContent from "./TableContent";
 
 function BasicFunPage() {
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    console.log("BasicFunPage useEffect 执行");
     setLoading(true);
 
     const timeoutId = setTimeout(() => {
