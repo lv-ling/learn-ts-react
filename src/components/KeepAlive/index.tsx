@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 interface KeepAliveProps {
-  children: React.ReactNode;
-  include?: string[]; // 需要缓存的路径模式
-  exclude?: string[]; // 不需要缓存的路径模式
-  max?: number; // 最大缓存数量
+  readonly children: React.ReactNode;
+  readonly include?: readonly string[]; // 需要缓存的路径模式
+  readonly exclude?: readonly string[]; // 不需要缓存的路径模式
+  readonly max?: number; // 最大缓存数量
 }
 
 // 全局缓存存储 - 存储所有缓存的组件实例
