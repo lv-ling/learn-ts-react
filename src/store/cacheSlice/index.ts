@@ -19,10 +19,10 @@ const cacheSlice = createSlice({
     initialState,
     reducers: {
         addCache(state, action: PayloadAction<CacheItem>) {
-            state.cache[action.payload.key] = action.payload; // 使用对象的键值对
+            state.cache[action.payload.key] = action.payload;
         },
         deleteCache(state, action: PayloadAction<string>) {
-            delete state.cache[action.payload]; // 删除对象的键
+            delete state.cache[action.payload];
         },
         updateScrollTop(
             state,
@@ -33,8 +33,20 @@ const cacheSlice = createSlice({
                 item.scrollTop = action.payload.scrollTop;
             }
         },
+        clearAllCache(state) {
+            state.cache = {};
+        },
+        clearCacheByPattern(state, action: PayloadAction<string>) {
+            // 支持通配符清理，如清除所有以 /basic 开头的缓存
+            const pattern = action.payload;
+            Object.keys(state.cache).forEach(key => {
+                if (key.includes(pattern)) {
+                    delete state.cache[key];
+                }
+            });
+        },
     },
 });
 
-export const { addCache, deleteCache, updateScrollTop } = cacheSlice.actions;
+export const { addCache, deleteCache, updateScrollTop, clearAllCache, clearCacheByPattern } = cacheSlice.actions;
 export default cacheSlice.reducer;

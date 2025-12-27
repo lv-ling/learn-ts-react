@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Typography, Button, Space } from 'antd';
-import { ClockCircleOutlined } from '@ant-design/icons';
+import { useState, useEffect } from "react";
+import { Card, Typography, Button, Space } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph, Text } = Typography;
 
 function FunctionComponentExample() {
   const [count, setCount] = useState(0);
   const [currentTime, setCurrentTime] = useState(
-    new Date().toLocaleTimeString('zh-CN')
+    new Date().toLocaleTimeString("zh-CN")
   );
 
   useEffect(() => {
     // 组件挂载后启动定时器
     const timerId = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString('zh-CN'));
-      console.log(1)
+      setCurrentTime(new Date().toLocaleTimeString("zh-CN"));
+      console.log(1);
     }, 1000);
 
     // 组件卸载前清除定时器（清理函数）
     return () => {
-      console.log('组件卸载，清除定时器');
+      console.log("组件卸载，清除定时器");
       clearInterval(timerId);
     };
   }, []); // 空依赖数组表示只在挂载和卸载时执行
@@ -68,4 +68,3 @@ function FunctionComponentExample() {
 }
 
 export default FunctionComponentExample;
-

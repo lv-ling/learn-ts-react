@@ -6,6 +6,7 @@ import {
   CodeOutlined,
   GlobalOutlined,
   SettingOutlined,
+  MehOutlined,
 } from "@ant-design/icons";
 import type { ReactNode } from "react";
 
@@ -18,6 +19,7 @@ const Counter = lazy(() => import("@/pages/Counter"));
 const ComponentComparison = lazy(() => import("@/pages/ComponentComparison"));
 const LocaleDemo = lazy(() => import("@/pages/LocaleDemo"));
 const I18nDemo = lazy(() => import("@/pages/I18nDemo"));
+const BasicFunPage = lazy(() => import("@/pages/BasicFunPage"));
 
 // 路由元数据接口
 export interface RouteMeta {
@@ -65,6 +67,14 @@ export const routes: AppRouteObject[] = [
     meta: {
       title: "组件对比",
       icon: <CodeOutlined />,
+    },
+  },
+  {
+    path: "/basicFunPage",
+    element: <BasicFunPage />,
+    meta: {
+      title: "基础功能",
+      icon: <MehOutlined />,
     },
   },
   {

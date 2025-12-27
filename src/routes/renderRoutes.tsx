@@ -17,9 +17,28 @@ function RouteLoading() {
 export default function RenderRoutes() {
   const location = useLocation();
   const element = useRoutes(routes as RouteObject[]);
+
+  // 可以根据路由配置决定是否启用缓存
+  const shouldCache = (path: string) => {
+    // 例如：只缓存特定页面，不缓存首页
+    const noCachePaths = ['/'];
+    return !noCachePaths.includes(path);
+  };
+
+  if (shouldCache(location.pathname)) {
+    return (
+      <Suspense fallback={<RouteLoading />}>
+        <KeepAlive cacheKey={location.pathname} max={5}>
+          {element}
+        </KeepAlive>
+      </Suspense>
+    );
+  }
+
+  // 不缓存的页面正常渲染
   return (
     <Suspense fallback={<RouteLoading />}>
-      <KeepAlive cacheKey={location.pathname}>{element}</KeepAlive>
+      {element}
     </Suspense>
   );
 }

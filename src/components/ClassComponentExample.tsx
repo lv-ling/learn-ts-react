@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Card, Typography, Button, Space } from 'antd';
-import { ClockCircleOutlined } from '@ant-design/icons';
+import { Component } from "react";
+import { Card, Typography, Button, Space } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -16,7 +16,7 @@ class ClassComponentExample extends Component<{}, ClassComponentState> {
     super(props);
     this.state = {
       count: 0,
-      currentTime: new Date().toLocaleTimeString('zh-CN'),
+      currentTime: new Date().toLocaleTimeString("zh-CN"),
     };
   }
 
@@ -24,7 +24,7 @@ class ClassComponentExample extends Component<{}, ClassComponentState> {
     // 组件挂载后启动定时器
     this.timerId = setInterval(() => {
       this.setState({
-        currentTime: new Date().toLocaleTimeString('zh-CN'),
+        currentTime: new Date().toLocaleTimeString("zh-CN"),
       });
     }, 1000);
   }
@@ -57,7 +57,8 @@ class ClassComponentExample extends Component<{}, ClassComponentState> {
           <div>
             <Title level={4}>Class 组件示例</Title>
             <Paragraph>
-              这是一个使用 Class 组件语法编写的组件，展示了生命周期方法和状态管理。
+              这是一个使用 Class
+              组件语法编写的组件，展示了生命周期方法和状态管理。
             </Paragraph>
           </div>
 
@@ -88,4 +89,3 @@ class ClassComponentExample extends Component<{}, ClassComponentState> {
 }
 
 export default ClassComponentExample;
-

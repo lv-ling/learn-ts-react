@@ -90,10 +90,7 @@ function AppLayout({ children }: AppLayoutProps) {
         </Sider>
 
         {/* 内容区域 - KeepAlive 内部处理滚动 */}
-        <Content
-          className="bg-gray-50"
-          style={{ height: "100%", overflow: "hidden" }}
-        >
+        <Content className="bg-gray-50" style={{ height: "100%" }}>
           {children}
         </Content>
       </Layout>
